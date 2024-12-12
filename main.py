@@ -66,7 +66,8 @@ def display_frames(captures):
 
 def release_resources(captures):
     for capture in captures:
-        capture.release()
+        cap = capture["cap"]
+        cap.release()
     cv2.destroyAllWindows()
 
 def main():
